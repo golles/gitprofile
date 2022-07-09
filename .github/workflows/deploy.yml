@@ -46,5 +46,5 @@ jobs:
           user: ${{secrets.USER}}
           key: ${{secrets.KEY}}
           pre_upload: rm -rf public_html/assets public_html/index.html
-          ssh_options: -o StrictHostKeyChecking=no
+          ssh_options: -o HostKeyAlgorithms=+ssh-dss
           scp_options: -v  
