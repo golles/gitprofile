@@ -1,11 +1,12 @@
-name: Test Deployment
+name: Test pull request
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  test-deploy:
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

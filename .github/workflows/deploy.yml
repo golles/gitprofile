@@ -1,4 +1,4 @@
-name: Deploy remotely
+name: Build and deploy remotely
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
 
 jobs:
   deploy:
+    name: Test and deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
