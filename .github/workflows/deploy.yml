@@ -37,14 +37,12 @@ jobs:
         env:
           CI: ''
 
-      - uses: mdallasanta/ssh-scp-deploy@v1.2.0
+      - name: Deploy with FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          local: dist
-          remote: ${{secrets.REMOTE}}
-          host: ${{secrets.HOST}}
+          protocol: ${{secrets.PROTOCOL}}
+          server: ${{secrets.HOST}}
           port: ${{secrets.PORT}}
-          user: ${{secrets.USER}}
+          username: ${{secrets.USER}}
           password: ${{secrets.PASSWORD}}
-          pre_upload: rm -rf public_html/assets public_html/index.html
-          ssh_options: -o StrictHostKeyChecking=no -o HostKeyAlgorithms=+ssh-dss
-          scp_options: -v  
+          local-dir: dist/
