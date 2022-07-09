@@ -1,11 +1,8 @@
-name: Deploy to gh-pages Branch
+name: Deploy remotely
 
 on:
   push:
     branches: [main]
-
-permissions:
-  contents: write
 
 jobs:
   deploy:
@@ -29,13 +26,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run prettier
+        run: npm run prettier
+
       - name: Build
         run: npm run build
         env:
           CI: ''
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - uses: mdallasanta/ssh-scp-deploy@v1.2.0
         with:
-          branch: gh-pages
-          folder: dist
+          local: dist
+          remote: ${{secrets.REMOTE}}
+          host: ${{secrets.HOST}}
+          port: ${{secrets.PORT}}
+          user: ${{secrets.USER}}
+          key: ${{secrets.KEY}}
+          pre_upload: rm -rf public_html/assets public_html/index.html
+          ssh_options: -o StrictHostKeyChecking=no
+          scp_options: -v  
