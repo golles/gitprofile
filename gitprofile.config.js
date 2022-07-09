@@ -14,6 +14,7 @@ const config = {
     linkedin: 'sandergols',
     twitter: 'golles13',
     facebook: 'sandergols',
+    instagram: 'golles13',
     dribbble: '',
     behance: '',
     medium: 'golles',
