@@ -21,10 +21,6 @@ const config = {
     dev: '',
     stackoverflow: '4532975/sander', // format: userid/username
     website: 'https://golles.nl',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // format: userid/username
-    website: 'https://arifszn.github.io',
     phone: '',
     email: '',
   },
