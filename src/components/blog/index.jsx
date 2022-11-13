@@ -7,13 +7,7 @@ import { getDevPost, getMediumPost } from '@arifszn/blog-js';
 import { formatDistance } from 'date-fns';
 
 const displaySection = (blog) => {
-  if (
-    typeof blog !== 'undefined' &&
-    typeof blog.source !== 'undefined' &&
-    typeof blog.username !== 'undefined' &&
-    blog.source &&
-    blog.username
-  ) {
+  if (blog?.source && blog?.username) {
     return true;
   } else {
     return false;
@@ -121,8 +115,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
               console.error(error);
             }
 
-            typeof window !== 'undefined' &&
-              window.open(article.link, '_blank');
+            window?.open(article.link, '_blank');
           }}
         >
           <div className="p-8 h-full w-full">
@@ -146,7 +139,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                     <h2 className="font-semibold text-base-content opacity-60">
                       {article.title}
                     </h2>
-                    <p className="opacity-50 text-xs">
+                    <p className="text-base-content opacity-50 text-xs">
                       {formatDistance(article.publishedAt, new Date(), {
                         addSuffix: true,
                       })}
@@ -157,7 +150,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                     <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
                       {article.categories.map((category, index2) => (
                         <div
-                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50"
+                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
                           key={index2}
                         >
                           #{category}
@@ -174,7 +167,9 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
     ) : (
       <div className="text-center mb-6">
         <AiOutlineContainer className="mx-auto h-12 w-12 opacity-30" />
-        <p className="mt-1 text-sm opacity-50">No recent post</p>
+        <p className="mt-1 text-sm opacity-50 text-base-content">
+          No recent post
+        </p>
       </div>
     );
   };
@@ -186,10 +181,10 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
           <div className="grid grid-cols-2 gap-6">
             <div className="col-span-2">
               <div
-                className={`card compact ${
+                className={`card compact bg-base-100 ${
                   loading || (articles && articles.length)
-                    ? 'bg-gradient-to-br to-base-200 from-base-100 shadow'
-                    : 'bg-base-100 shadow-lg'
+                    ? 'card compact shadow bg-opacity-40'
+                    : 'shadow-lg'
                 }`}
               >
                 <div className="card-body">
@@ -198,7 +193,9 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                       {loading ? (
                         skeleton({ width: 'w-28', height: 'h-8' })
                       ) : (
-                        <span className="opacity-70">Recent Posts</span>
+                        <span className="text-base-content opacity-70">
+                          Recent Posts
+                        </span>
                       )}
                     </h5>
                   </div>

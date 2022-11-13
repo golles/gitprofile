@@ -15,6 +15,7 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaStackOverflow,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
@@ -93,8 +94,8 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Company:"
                   value={profile.company}
                   link={
-                    isCompanyMention(profile.company)
-                      ? companyLink(profile.company)
+                    isCompanyMention(profile.company.trim())
+                      ? companyLink(profile.company.trim())
                       : null
                   }
                 />
@@ -105,7 +106,7 @@ const Details = ({ profile, loading, social, github }) => {
                 value={github.username}
                 link={`https://github.com/${github.username}`}
               />
-              {typeof social.twitter !== 'undefined' && social.twitter && (
+              {social?.twitter && (
                 <ListItem
                   icon={<SiTwitter className="mr-2" />}
                   title="Twitter:"
@@ -113,7 +114,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://twitter.com/${social.twitter}`}
                 />
               )}
-              {typeof social.linkedin !== 'undefined' && social.linkedin && (
+              {social?.linkedin && (
                 <ListItem
                   icon={<GrLinkedinOption className="mr-2" />}
                   title="LinkedIn:"
@@ -121,7 +122,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
                 />
               )}
-              {typeof social.dribbble !== 'undefined' && social.dribbble && (
+              {social?.dribbble && (
                 <ListItem
                   icon={<CgDribbble className="mr-2" />}
                   title="Dribbble:"
@@ -129,7 +130,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://dribbble.com/${social.dribbble}`}
                 />
               )}
-              {typeof social.behance !== 'undefined' && social.behance && (
+              {social?.behance && (
                 <ListItem
                   icon={<FaBehanceSquare className="mr-2" />}
                   title="Behance:"
@@ -137,7 +138,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://www.behance.net/${social.behance}`}
                 />
               )}
-              {typeof social.facebook !== 'undefined' && social.facebook && (
+              {social?.facebook && (
                 <ListItem
                   icon={<FaFacebook className="mr-2" />}
                   title="Facebook:"
@@ -145,7 +146,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://www.facebook.com/${social.facebook}`}
                 />
               )}
-              {typeof social.instagram !== 'undefined' && social.instagram && (
+              {social?.instagram && (
                 <ListItem
                   icon={<AiFillInstagram className="mr-2" />}
                   title="Instagram:"
@@ -153,7 +154,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://www.instagram.com/${social.instagram}`}
                 />
               )}
-              {typeof social.medium !== 'undefined' && social.medium && (
+              {social?.medium && (
                 <ListItem
                   icon={<AiFillMediumSquare className="mr-2" />}
                   title="Medium:"
@@ -161,7 +162,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://medium.com/@${social.medium}`}
                 />
               )}
-              {typeof social.dev !== 'undefined' && social.dev && (
+              {social?.dev && (
                 <ListItem
                   icon={<FaDev className="mr-2" />}
                   title="Dev:"
@@ -169,7 +170,15 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://dev.to/${social.dev}`}
                 />
               )}
-              {typeof social.website !== 'undefined' && social.website && (
+              {social?.stackoverflow && (
+                <ListItem
+                  icon={<FaStackOverflow className="mr-2" />}
+                  title="Stack Overflow:"
+                  value={social.stackoverflow.split('/').slice(-1)}
+                  link={`https://stackoverflow.com/users/${social.stackoverflow}`}
+                />
+              )}
+              {social?.website && (
                 <ListItem
                   icon={<FaGlobe className="mr-2" />}
                   title="Website:"
@@ -177,7 +186,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={social.website}
                 />
               )}
-              {typeof social.phone !== 'undefined' && social.phone && (
+              {social?.phone && (
                 <ListItem
                   icon={<RiPhoneFill className="mr-2" />}
                   title="Phone:"
@@ -185,7 +194,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`tel:${social.phone}`}
                 />
               )}
-              {typeof social.email !== 'undefined' && social.email && (
+              {social?.email && (
                 <ListItem
                   icon={<MdMail className="mr-2" />}
                   title="Email:"

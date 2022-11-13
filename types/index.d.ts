@@ -80,6 +80,11 @@ export interface Social {
   dev?: string;
 
   /**
+   * Stack Overflow
+   */
+  stackoverflow?: string;
+
+  /**
    * Website
    */
   website?: string;
@@ -187,6 +192,11 @@ export interface ThemeConfig {
   respectPrefersColorScheme?: boolean;
 
   /**
+   * Hide the ring in Profile picture
+   */
+  hideAvatarRing?: boolean;
+
+  /**
    * Available themes
    */
   themes?: Array<string>;
@@ -202,6 +212,7 @@ export interface Experience {
   position?: string;
   from?: string;
   to?: string;
+  companyLink?: string;
 }
 
 export interface Education {
@@ -209,6 +220,10 @@ export interface Education {
   degree?: string;
   from?: string;
   to?: string;
+}
+
+export interface Resume {
+  fileUrl?: string;
 }
 
 export interface Config {
@@ -221,6 +236,11 @@ export interface Config {
    * Social links
    */
   social?: Social;
+
+  /**
+   * Resume
+   */
+  resume?: Resume;
 
   /**
    * Skill list

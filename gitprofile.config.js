@@ -19,9 +19,17 @@ const config = {
     behance: '',
     medium: 'golles',
     dev: '',
+    stackoverflow: '4532975/sander', // format: userid/username
     website: 'https://golles.nl',
+    medium: 'arifszn',
+    dev: 'arifszn',
+    stackoverflow: '', // format: userid/username
+    website: 'https://arifszn.github.io',
     phone: '',
     email: '',
+  },
+  resume: {
+    fileUrl: 'resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Java',
@@ -42,7 +50,9 @@ const config = {
       company: 'TomTom International',
       position: 'Senior Software Engineer',
       from: 'September 2011',
+
       to: 'Present',
+      companyLink: 'https://example.com',
     },
     {
       company: 'NC-Websites',
@@ -81,6 +91,7 @@ const config = {
     // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
     id: 'G-QWRTF9CC02', // Please remove this and use your own tag id or keep it empty
   },
+  // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
     id: '', //  Please remove this and use your own id or keep it empty
     snippetVersion: 6,
@@ -95,6 +106,9 @@ const config = {
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: false,
+
+    // Hide the ring in Profile picture
+    hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [

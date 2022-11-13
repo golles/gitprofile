@@ -6,17 +6,29 @@
   <h4 align="center">Easy to use automatic portfolio builder for every GitHub user!</h4>
 
   <p align="center">
-    <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/arifszn/gitprofile"/>
+    <a href="https://codeclimate.com/github/arifszn/gitprofile/maintainability">
+      <img src="https://api.codeclimate.com/v1/badges/c60f42d7d0b61bd33e98/maintainability" />
     </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
-      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
+    <a href="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml">
+      <img src="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml/badge.svg" />
     </a>
     <a href="https://github.com/arifszn/gitprofile/issues">
       <img src="https://img.shields.io/github/issues/arifszn/gitprofile"/>
     </a>
+    <a href="https://github.com/arifszn/gitprofile/stargazers">
+      <img src="https://img.shields.io/github/stars/arifszn/gitprofile"/>
+    </a>
+    <a href="https://github.com/arifszn/gitprofile/network/members">
+      <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
+    </a>
+    <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
+      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
+    </a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+    </a>
+    <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/arifszn/gitprofile"/>
     </a>
     <a href="https://www.buymeacoffee.com/arifszn">
       <img src="https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow?logo=buymeacoffee"/>
@@ -37,13 +49,13 @@
 
 <p align="center">
   <a href="https://arifszn.github.io/gitprofile">
-      <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" alt="Preview" width="60%"/>
+    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" alt="Preview" width="60%"/>
   </a>
   <br/>
   <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
 </p>
 
-**GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite.js. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
+**GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
 
 **Features:**
 
@@ -54,21 +66,34 @@
 ✓ [SEO](#seo)  
 ✓ [Avatar and Bio](#avatar-and-bio)  
 ✓ [Social Links](#social-links)  
-✓ [Skills](#skills)  
-✓ [Experience](#experience)  
-✓ [Education](#education)  
-✓ [Projects](#projects)  
-✓ [Blog Posts](#blog-posts)
+✓ [Skill Section](#skills)  
+✓ [Experience Section](#experience)  
+✓ [Education Section](#education)  
+✓ [Projects Section](#projects)  
+✓ [Blog Posts Section](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
+<p align="center">
+  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
+</p>
+
+## 🎉 Thank you for the 400 ★
+
+<p>
+  <a href="https://arifszn.github.io/gitprofile">
+    <img src="https://user-images.githubusercontent.com/45073703/189209364-fc4df315-b66a-4654-907d-b0b7a9d2161e.gif" alt="Thank You" width="60%"/>
+  </a>
+</p>
+
 ## 🛠 Installation & Setup
 
-There are two ways to use **GitProfile**. Use either one.
+There are three ways to use **GitProfile**. Use any.
 
-- Forking this repo
+- Forking this repo _(recommended)_
+- Setting up locally
 - Installing as package
 
 ### Forking this repo
@@ -76,16 +101,18 @@ There are two ways to use **GitProfile**. Use either one.
 These instructions will get you a copy of the project and deploy your portfolio online!
 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
-- **Rename repo:** Rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
-- **Enable workflows:** Go to your repo's **Actions** page and enable workflows.
+- **Rename repo:**
+  - If you want to host your portfolio at `https://<USERNAME>.github.io`, rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
+  - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO>` (e.g. `portfolio`) in GitHub.
+- **Enable workflows:** Go to your repo's **Actions** tab and enable workflows.
 
   ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
 
 - **Base Value:** Open `vite.config.js`, and change `base`'s value.
 
-  - If you are deploying to `https://<USERNAME>.github.io/`, set `base` to `'/'`.
+  - If you are deploying to `https://<USERNAME>.github.io`, set `base` to `'/'`.
 
-  - If you are deploying to `https://<USERNAME>.github.io/<REPO>/`, for example your repository is at `https://github.com/<USERNAME>/<REPO>`, then set `base` to `'/<REPO>/'`.
+  - If you are deploying to `https://<USERNAME>.github.io/<REPO>` (e.g. `https://<USERNAME>.github.io/portfolio`), then set `base` to `'/<REPO>/'` (e.g. `'/portfolio/'`).
 
   ```js
   // vite.config.js
@@ -95,14 +122,36 @@ These instructions will get you a copy of the project and deploy your portfolio 
   }
   ```
 
-- **First Commit:** Now commit to your **main** branch with your changes. The CI/CD pipeline will publish your page at the `gh-pages` branch automatically.
-- **Change deploy branch:** Go to your repo's **Settings** ➜ **Pages** ➜ **Source** and change the branch to `gh-pages` and click **save**.
+- **Commit the changes:** Now commit to your **main** branch with your changes. Wait a few minutes so that the CI/CD pipeline can publish your website to GitHub Pages. You can check the progress in the [Actions](https://github.com/arifszn/gitprofile/actions) tab.
 
-Your personal portfolio will be live at `username.github.io`. Any time you commit a change to the **main** branch, the website will be automatically updated.
+Your portfolio website will be live shortly. Any time you commit a change to the **main** branch, the website will be automatically updated. If you face any issue viewing the website, double-check the `base` value in the `vite.config.js` file. Also, check if **Source** is set to **GitHub Actions** in **Settings** ➜ **Pages** ➜ **Build and deployment**.
 
-If you see only `README` at `username.github.io`, be sure to change your GitHub Page's source to `gh-pages` branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `base` value in the `vite.config.js`.
+If you wish to add a custom domain, no CNAME file is required. Just add it to your repo's **Settings** ➜ **Pages** ➜ **Custom domain**.
 
-As this is a vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+
+### Setting up locally
+
+- Clone the project and change directory.
+
+  ```shell
+  git clone https://github.com/arifszn/gitprofile.git
+  cd gitprofile
+  ```
+
+- Install dependencies.
+
+  ```shell
+  npm install
+  ```
+
+- Run dev server.
+
+  ```shell
+  npm run dev
+  ```
+
+- Finally, visit [`http://localhost:5173/gitprofile/`](http://localhost:5173/gitprofile/) from your browser.
 
 ### Installing as package
 
@@ -169,35 +218,41 @@ const config = {
     behance: '',
     medium: '',
     dev: '',
+    stackoverflow: '',
     website: '',
     phone: '',
     email: '',
   },
+  resume: {
+    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
+  },
   skills: ['JavaScript', 'React.js'],
   experiences: [
     {
-      company: 'Company name 1',
-      position: 'Software Engineer',
-      from: 'July 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'September 2021',
       to: 'Present',
+      companyLink: 'https://example.com',
     },
     {
-      company: 'Company name 2',
-      position: 'Jr. Software Engineer',
-      from: 'January 2019',
-      to: ' June 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'July 2019',
+      to: 'August 2021',
+      companyLink: 'https://example.com',
     },
   ],
   education: [
     {
-      institution: 'Institution name 1',
-      degree: 'ABC',
+      institution: 'Institution Name',
+      degree: 'Degree',
       from: '2015',
       to: '2019',
     },
     {
-      institution: 'Institution name 2',
-      degree: 'XYZ',
+      institution: 'Institution Name',
+      degree: 'Degree',
       from: '2012',
       to: '2014',
     },
@@ -205,13 +260,13 @@ const config = {
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn',
+    username: 'arifszn', // to hide blog section, keep it empty
     limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
-    // GA3 tracking id/GA4 tag id
-    id: '', // UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
+  // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
     id: '',
     snippetVersion: 6,
@@ -226,6 +281,9 @@ const config = {
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: true,
+
+    // Hide the ring in Profile picture
+    hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
@@ -317,10 +375,6 @@ module.exports = {
 };
 ```
 
-<p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
-</p>
-
 ### Google Analytics
 
 **GitProfile** supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
@@ -339,7 +393,7 @@ Besides tracking visitors, it will track `click events` on projects and blog pos
 
 ### Hotjar
 
-**GitProfile** supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
+**GitProfile** supports [hotjar](https://www.hotjar.com) to track visitor interaction and behavior. If you do not want to use Hotjar, keep the `id` empty.
 
 ```js
 // gitprofile.config.js
@@ -362,7 +416,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Instagram, Dribbble, Behance, Medium, dev, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -377,6 +431,7 @@ module.exports = {
     behance: '',
     medium: '',
     dev: '',
+    stackoverflow: '',
     website: '',
     phone: '',
     email: '',
@@ -408,16 +463,18 @@ module.exports = {
   // ...
   experiences: [
     {
-      company: 'Company name 1',
-      position: 'Software Engineer',
-      from: 'July 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'September 2021',
       to: 'Present',
+      companyLink: 'https://example.com',
     },
     {
-      company: 'Company name 2',
-      position: 'Jr. Software Engineer',
-      from: 'January 2019',
-      to: ' June 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'July 2019',
+      to: 'August 2021',
+      companyLink: 'https://example.com',
     },
   ],
 };
@@ -494,7 +551,7 @@ The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 
 ## 💖 Support
 
-<p>You can show your support by starring this project.</p>
+<p>You can show your support by starring this project. ★</p>
 <a href="https://github.com/arifszn/gitprofile/stargazers">
   <img src="https://img.shields.io/github/stars/arifszn/gitprofile?style=social" alt="Github Star">
 </a>
@@ -505,4 +562,4 @@ To contribute, see the [Contributing guide](https://github.com/arifszn/gitprofil
 
 ## 📄 License
 
-[Apache-2.0 License](https://github.com/arifszn/gitprofile/blob/main/LICENSE)
+[MIT](https://github.com/arifszn/gitprofile/blob/main/LICENSE)

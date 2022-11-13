@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
 
 const Project = ({ repo, loading, github, googleAnalytics }) => {
+  if (!loading && Array.isArray(repo) && repo.length === 0) {
+    return <></>;
+  }
+
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < github.limit; index++) {
@@ -72,7 +76,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
             console.error(error);
           }
 
-          typeof window !== 'undefined' && window.open(item.html_url, '_blank');
+          window?.open(item.html_url, '_blank');
         }}
       >
         <div className="flex justify-between flex-col p-8 h-full w-full">
@@ -82,7 +86,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-5 h-5 mr-2 stroke-current"
+                className="text-base-content inline-block w-5 h-5 mr-2 stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -92,7 +96,9 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                 ></path>
               </svg>
               <span>
-                <h5 className="card-title text-lg">{item.name}</h5>
+                <h5 className="card-title text-lg text-base-content">
+                  {item.name}
+                </h5>
               </span>
             </div>
             <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
@@ -130,14 +136,16 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
       <div className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-2">
-            <div className="card compact bg-gradient-to-br to-base-200 from-base-100 shadow">
+            <div className="card compact bg-base-100 shadow bg-opacity-40">
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">
                     {loading ? (
                       skeleton({ width: 'w-28', height: 'h-8' })
                     ) : (
-                      <span className="opacity-70">My Projects</span>
+                      <span className="text-base-content opacity-70">
+                        My Projects
+                      </span>
                     )}
                   </h5>
                   {loading ? (
@@ -147,7 +155,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       href={`https://github.com/${github.username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
-                      className="opacity-50"
+                      className="text-base-content opacity-50"
                     >
                       See All
                     </a>
