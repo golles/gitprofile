@@ -1,17 +1,53 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Start development server",
-            "type": "shell",
-            "command": "npm run dev",
-            "problemMatcher": []
-        },
-        {
-            "label": "Preview production build",
-            "type": "shell",
-            "command": "npm run dev",
-            "problemMatcher": []
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start development server",
+      "type": "shell",
+      "command": "npm run dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Preview production build",
+      "type": "shell",
+      "command": "npm run preview",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build library",
+      "type": "shell",
+      "command": "npm run build:library",
+      "problemMatcher": []
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "npm run lint",
+      "problemMatcher": []
+    },
+    {
+      "label": "lint fix",
+      "type": "shell",
+      "command": "npm run lint:fix",
+      "problemMatcher": []
+    },
+    {
+      "label": "prettier",
+      "type": "shell",
+      "command": "npm run prettier",
+      "problemMatcher": []
+    },
+    {
+      "label": "prettier fix",
+      "type": "shell",
+      "command": "npm run prettier:fix",
+      "problemMatcher": []
+    }
+  ]
 }
