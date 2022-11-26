@@ -35,7 +35,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.bg-base-200 {
+.bg-base-300 {
   background-color: #f2f2f2;
   background-image: url('../img/bg.png');
   background-position: left top;
