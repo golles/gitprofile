@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'golles', // Your GitHub org/user name. (Required)
     sortBy: 'updated', // stars | updated
-    limit: 6, // How many projects to display.
+    limit: 10, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: ['golles'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -25,7 +25,7 @@ const config = {
     email: '',
   },
   resume: {
-    fileUrl: 'resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Java',
@@ -45,16 +45,30 @@ const config = {
     {
       company: 'TomTom International',
       position: 'Senior Software Engineer',
-      from: 'September 2011',
-
+      from: 'July 2016',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://tomtom.com',
+    },
+    {
+      company: 'TomTom International',
+      position: 'Software Engineer',
+      from: 'July 2012',
+      to: 'July 2016',
+      companyLink: 'https://tomtom.com',
+    },
+    {
+      company: 'TomTom International',
+      position: 'Junior Software Engineer',
+      from: 'September 2011',
+      to: 'July 2012',
+      companyLink: 'https://tomtom.com',
     },
     {
       company: 'NC-Websites',
       position: 'Software developer',
       from: 'September 2008',
       to: 'July 2012',
+      companyLink: 'https://nc-websites.nl',
     },
   ],
   education: [
