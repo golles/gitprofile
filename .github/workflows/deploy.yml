@@ -38,7 +38,7 @@ jobs:
         run: npm run build
 
       - name: Deploy with FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           protocol: ${{secrets.PROTOCOL}}
           server: ${{secrets.HOST}}
