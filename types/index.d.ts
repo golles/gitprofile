@@ -214,6 +214,19 @@ export interface Experience {
   to?: string;
   companyLink?: string;
 }
+export interface Certifications {
+  body?: string;
+  name?: string;
+  year?: string;
+  link?: string;
+}
+
+export interface ExternalProjects {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  link: string;
+}
 
 export interface Education {
   institution?: string;
@@ -253,6 +266,16 @@ export interface Config {
   experiences?: Array<Experience>;
 
   /**
+   * External Projects
+   */
+  externalProjects?: Array<ExternalProjects>;
+
+  /**
+   * Certifications list
+   */
+  certifications?: Array<Certifications>;
+
+  /**
    * Education list
    */
   education?: Array<Education>;
@@ -276,6 +299,11 @@ export interface Config {
    * Theme config
    */
   themeConfig?: ThemeConfig;
+
+  /**
+   * Custom footer
+   */
+  footer?: string;
 }
 
 export interface GitProfileProps {

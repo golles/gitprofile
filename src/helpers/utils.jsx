@@ -162,7 +162,9 @@ export const sanitizeConfig = (config) => {
       fileUrl: config?.resume?.fileUrl || '',
     },
     skills: config?.skills || [],
+    externalProjects: config?.externalProjects || [],
     experiences: config?.experiences || [],
+    certifications: config?.certifications || [],
     education: config?.education || [],
     blog: {
       source: config?.blog?.source,
@@ -185,6 +187,7 @@ export const sanitizeConfig = (config) => {
       themes: themes,
       customTheme: customTheme,
     },
+    footer: config?.footer,
   };
 };
 
@@ -206,7 +209,7 @@ export const tooManyRequestError = (reset) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          rate limit.
+          rate limit
         </a>
         ! Try again later{` ${reset}`}.
       </p>

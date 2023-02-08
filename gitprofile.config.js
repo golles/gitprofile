@@ -71,6 +71,14 @@ const config = {
       companyLink: 'https://nc-websites.nl',
     },
   ],
+  /* certifications: [
+    {
+      name: 'Lorem ipsum',
+      body: 'Lorem ipsum dolor sit amet',
+      year: 'March 2022',
+      link: 'https://example.com'
+    },
+  ], */
   education: [
     {
       institution: 'Hanze University of Applied Sciences Groningen',
@@ -91,6 +99,9 @@ const config = {
       to: '2007',
     },
   ],
+
+  // To hide the `My Projects` section, keep it empty.
+  externalProjects: [],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'medium', // medium | dev
@@ -163,6 +174,13 @@ const config = {
       'base-100': '#ffffff',
     },
   },
+
+  // Optional Footer. Supports plain text or HTML.
+  footer: `Made with <a
+      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a> and ❤️`,
 };
 
 export default config;

@@ -7,9 +7,11 @@ import AvatarCard from './avatar-card';
 import Details from './details';
 import Skill from './skill';
 import Experience from './experience';
+import Certification from './certification';
 import Education from './education';
 import Project from './project';
 import Blog from './blog';
+import Footer from './footer';
 import {
   genericError,
   getInitialTheme,
@@ -18,12 +20,12 @@ import {
   setupHotjar,
   tooManyRequestError,
   sanitizeConfig,
-  skeleton,
 } from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
+import ExternalProject from './external-project';
 
 const bgColor = 'bg-base-300';
 
@@ -187,6 +189,10 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         education={sanitizedConfig.education}
                       />
+                      <Certification
+                        loading={loading}
+                        certifications={sanitizedConfig.certifications}
+                      />
                     </div>
                   </div>
                   <div className="lg:col-span-2 col-span-1">
@@ -195,6 +201,11 @@ const GitProfile = ({ config }) => {
                         repo={repo}
                         loading={loading}
                         github={sanitizedConfig.github}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
+                      <ExternalProject
+                        loading={loading}
+                        externalProjects={sanitizedConfig.externalProjects}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
                       <Blog
@@ -210,24 +221,7 @@ const GitProfile = ({ config }) => {
                 className={`p-4 footer ${bgColor} text-base-content footer-center`}
               >
                 <div className="card compact bg-base-100 shadow">
-                  <a
-                    className="card-body"
-                    href="https://github.com/arifszn/gitprofile"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div>
-                      {loading ? (
-                        skeleton({ width: 'w-52', height: 'h-6' })
-                      ) : (
-                        <p className="font-mono text-sm">
-                          Made with{' '}
-                          <span className="text-primary">GitProfile</span> and
-                          ❤️
-                        </p>
-                      )}
-                    </div>
-                  </a>
+                  <Footer content={sanitizedConfig.footer} loading={loading} />
                 </div>
               </footer>
             </Fragment>
@@ -263,13 +257,32 @@ GitProfile.propTypes = {
       phone: PropTypes.string,
       email: PropTypes.string,
     }),
+    resume: PropTypes.shape({
+      fileUrl: PropTypes.string,
+    }),
     skills: PropTypes.array,
+    externalProjects: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string,
+      })
+    ),
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
         position: PropTypes.string,
         from: PropTypes.string,
         to: PropTypes.string,
+      })
+    ),
+    certifications: PropTypes.arrayOf(
+      PropTypes.shape({
+        body: PropTypes.string,
+        name: PropTypes.string,
+        year: PropTypes.string,
+        link: PropTypes.string,
       })
     ),
     education: PropTypes.arrayOf(
@@ -308,6 +321,7 @@ GitProfile.propTypes = {
         '--rounded-btn': PropTypes.string,
       }),
     }),
+    footer: PropTypes.string,
   }).isRequired,
 };
 
