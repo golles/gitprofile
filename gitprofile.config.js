@@ -13,6 +13,7 @@ const config = {
   social: {
     linkedin: 'sandergols',
     twitter: 'golles13',
+    mastodon: 'golles@mastodon.nl',
     facebook: 'sandergols',
     instagram: 'golles13',
     dribbble: '',
@@ -20,6 +21,8 @@ const config = {
     medium: 'golles',
     dev: '',
     stackoverflow: '4532975/sander', // format: userid/username
+    skype: '',
+    telegram: '',
     website: 'https://golles.nl',
     phone: '',
     email: '',

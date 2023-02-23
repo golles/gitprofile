@@ -246,6 +246,7 @@ GitProfile.propTypes = {
     social: PropTypes.shape({
       linkedin: PropTypes.string,
       twitter: PropTypes.string,
+      mastodon: PropTypes.string,
       facebook: PropTypes.string,
       instagram: PropTypes.string,
       dribbble: PropTypes.string,
@@ -254,6 +255,8 @@ GitProfile.propTypes = {
       dev: PropTypes.string,
       stackoverflow: PropTypes.string,
       website: PropTypes.string,
+      skype: PropTypes.string,
+      telegram: PropTypes.string,
       phone: PropTypes.string,
       email: PropTypes.string,
     }),

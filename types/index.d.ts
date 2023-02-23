@@ -50,6 +50,11 @@ export interface Social {
   twitter?: string;
 
   /**
+   * Mastodon
+   */
+  mastodon?: string;
+
+  /**
    * Facebook
    */
   facebook?: string;
@@ -88,6 +93,16 @@ export interface Social {
    * Website
    */
   website?: string;
+
+  /**
+   * Skype username
+   */
+  skype?: string;
+
+  /**
+   * Telegram username
+   */
+  telegram?: string;
 
   /**
    * Phone

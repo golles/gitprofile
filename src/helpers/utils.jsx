@@ -147,6 +147,7 @@ export const sanitizeConfig = (config) => {
     social: {
       linkedin: config?.social?.linkedin,
       twitter: config?.social?.twitter,
+      mastodon: config?.social?.mastodon,
       facebook: config?.social?.facebook,
       instagram: config?.social?.instagram,
       dribbble: config?.social?.dribbble,
@@ -157,6 +158,8 @@ export const sanitizeConfig = (config) => {
       website: config?.social?.website,
       phone: config?.social?.phone,
       email: config?.social?.email,
+      skype: config?.social?.skype,
+      telegram: config?.social?.telegram,
     },
     resume: {
       fileUrl: config?.resume?.fileUrl || '',
