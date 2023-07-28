@@ -21,8 +21,8 @@
     <a href="https://github.com/arifszn/gitprofile/network/members">
       <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
     </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
-      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
+    <a href="https://github.com/arifszn/gitprofile/commits/main">
+      <img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/>
     </a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
@@ -100,7 +100,7 @@ There are three ways to use **GitProfile**. Use any.
 
 ### Forking this repo
 
-These instructions will get you a copy of the project and deploy your portfolio online!
+These instructions will get you a copy of the project and deploy your portfolio online using GitHub Pages!
 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
 - **Rename repo:**
@@ -130,7 +130,7 @@ Your portfolio website will be live shortly. Any time you commit a change to the
 
 If you wish to add a custom domain, no CNAME file is required. Just add it to your repo's **Settings** ➜ **Pages** ➜ **Custom domain**.
 
-As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services. Also, if you are not deploying to GitHub pages, `base:` might need to be deleted from `vite.config.js`.
 
 ### Setting up locally
 
@@ -219,6 +219,7 @@ const config = {
     mastodon: '',
     facebook: '',
     instagram: '',
+    youtube: '',
     dribbble: '',
     behance: '',
     medium: '',
@@ -457,7 +458,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -469,6 +470,7 @@ const config = {
     mastodon: 'arifszn@mastodon.social',
     facebook: '',
     instagram: '',
+    youtube: '',
     dribbble: '',
     behance: '',
     medium: '',

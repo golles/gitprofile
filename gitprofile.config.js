@@ -16,6 +16,7 @@ const config = {
     mastodon: 'golles@mastodon.nl',
     facebook: 'sandergols',
     instagram: 'golles13',
+    youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
     medium: 'golles',
