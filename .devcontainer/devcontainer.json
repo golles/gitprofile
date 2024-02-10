@@ -1,51 +1,55 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:18-bullseye",
   "name": "GitProfile development",
-  "context": "..",
-  "forwardPorts": [4173, 5173],
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
   "postCreateCommand": "npm install",
-  "extensions": [
-    "esbenp.prettier-vscode",
-    "github.vscode-pull-request-github",
-    "ryanluker.vscode-coverage-gutters"
-  ],
-  "settings": {
-    "files.eol": "\n",
-    "editor.tabSize": 2,
-    "terminal.integrated.profiles.linux": {
-      "zsh": {
-        "path": "/usr/bin/zsh"
-      }
+  "forwardPorts": [4173, 5173],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "gitHub.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "ryanluker.vscode-coverage-gutters",
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.tabSize": 4,
+        "python.analysis.autoSearchPaths": false,
+        "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "files.trimTrailingWhitespace": true,
+        "editor.defaultFormatter": null,
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[javascriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[typescriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[css]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[markdown]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+        },
+      },
     },
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.defaultFormatter": null,
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
-  }
+  },
+  "remoteUser": "vscode",
+  "features": {
+    "node": "latest",
+  },
 }
