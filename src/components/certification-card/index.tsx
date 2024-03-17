@@ -19,7 +19,7 @@ const ListItem = ({
       style={{ left: '-4.5px' }}
     ></div>
     <div className="my-0.5 text-xs">{year}</div>
-    <div className="font-semibold">
+    <div className="font-medium">
       <a href={link} target="_blank" rel="noreferrer">
         {name}
       </a>
@@ -81,10 +81,10 @@ const CertificationCard = ({
                 {certifications.map((certification, index) => (
                   <ListItem
                     key={index}
-                    year={`${certification.year}`}
+                    year={certification.year}
                     name={certification.name}
                     body={certification.body}
-                    link={certification.link ? certification.link : undefined}
+                    link={certification.link}
                   />
                 ))}
               </>
