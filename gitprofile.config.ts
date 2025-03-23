@@ -58,7 +58,7 @@ const CONFIG = {
   },
   social: {
     linkedin: 'sandergols',
-    twitter: 'golles13',
+    x: 'golles13',
     mastodon: 'golles@mastodon.nl',
     researchGate: '',
     facebook: 'sandergols',
