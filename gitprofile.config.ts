@@ -14,18 +14,34 @@ const CONFIG = {
     github: {
       display: true, // Display GitHub projects?
       header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'updated', // Sort projects by 'stars' or 'updated'
         limit: 14, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
-          projects: ['golles'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: ['golles/golles'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [
+          'golles/ha-knmi',
+          'golles/python-weerlive',
+          'ha-tomtom-travel-time',
+          'golles/tomtom-apis-python',
+          'golles/ha-aquatlantis-ori',
+          'golles/python-aquatlantis-ori',
+          'golles/ha-kamstrup_403',
+          'golles/Home-Assistant-Sensor-MC66C',
+          'golles/mock-yaml-secrets-action',
+          'golles/Home-Assistant-Config',
+          'golles/ESPHome-Config',
+          'golles/ha-active-installation-badges',
+          'golles/dashcam-trip-merger',
+          'golles/mop',
+          'golles/zepta-jury',
+        ], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
