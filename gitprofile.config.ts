@@ -17,7 +17,7 @@ const CONFIG = {
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'updated', // Sort projects by 'stars' or 'updated'
-        limit: 10, // How many projects to display.
+        limit: 14, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
           projects: ['golles'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
@@ -51,11 +51,7 @@ const CONFIG = {
       // ],
     },
   },
-  seo: {
-    title: 'Portfolio of Sander',
-    description: '',
-    imageURL: '',
-  },
+  seo: { title: 'Portfolio of Sander', description: '', imageURL: '' },
   social: {
     linkedin: 'sandergols',
     x: 'golles13',
@@ -72,7 +68,7 @@ const CONFIG = {
     medium: 'golles',
     dev: '',
     stackoverflow: '4532975/sander', // format: userid/username
-    skype: '',
+    discord: '',
     telegram: '',
     website: 'https://golles.nl',
     phone: '',
@@ -183,10 +179,7 @@ const CONFIG = {
     id: 'G-QWRTF9CC02', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
-  hotjar: {
-    id: '', //  Please remove this and use your own id or keep it empty
-    snippetVersion: 6,
-  },
+  hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
     defaultTheme: 'procyon',
 
@@ -235,17 +228,11 @@ const CONFIG = {
       'dim',
       'nord',
       'sunset',
+      'caramellatte',
+      'abyss',
+      'silk',
       'procyon',
     ],
-
-    // Custom theme, applied to `procyon` theme
-    customTheme: {
-      primary: '#03a9f4',
-      secondary: '#f000b8',
-      accent: '#37cdbe',
-      neutral: '#3d4451',
-      'base-100': '#ffffff',
-    },
   },
 
   // Optional Footer. Supports plain text or HTML.

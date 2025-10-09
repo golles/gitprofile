@@ -45,7 +45,7 @@ jobs:
       - name: Run prettier
         run: npm run prettier
 
-      - name: Build
+      - name: Build with vite
         run: npm run build
 
       - name: Deploy with FTP

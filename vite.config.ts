@@ -7,6 +7,9 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: CONFIG.base || '/',
+  server: {
+    host: true,
+  },
   plugins: [
     react(),
     createHtmlPlugin({
@@ -15,6 +18,16 @@ export default defineConfig({
           metaTitle: CONFIG.seo.title,
           metaDescription: CONFIG.seo.description,
           metaImageURL: CONFIG.seo.imageURL,
+          googleAnalyticsScript: CONFIG.googleAnalytics.id
+            ? `<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${CONFIG.googleAnalytics.id}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${CONFIG.googleAnalytics.id}');
+</script>`
+            : '',
         },
       },
     }),
