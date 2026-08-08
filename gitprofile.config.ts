@@ -109,10 +109,17 @@ const CONFIG = {
   ],
   experiences: [
     {
+      company: 'NC-Websites',
+      position: 'Software developer',
+      from: 'March 2026',
+      to: 'Present',
+      companyLink: 'https://nc-websites.nl',
+    },
+    {
       company: 'TomTom International',
       position: 'Senior Software Engineer',
       from: 'July 2016',
-      to: 'Present',
+      to: 'December 2025',
       companyLink: 'https://tomtom.com',
     },
     {
