@@ -44,7 +44,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.6.2",
     "react-hotjar": "^6.3.1",
-    "react-icons": "^5.4.0",
+    "react-icons": "^5.7.0",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
     "vail": "^1.0.3",
