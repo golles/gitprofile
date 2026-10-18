@@ -10,7 +10,7 @@
         "esbenp.prettier-vscode",
         "gitHub.vscode-github-actions",
         "github.vscode-pull-request-github",
-        "ryanluker.vscode-coverage-gutters"
+        "ryanluker.vscode-coverage-gutters",
       ],
       "settings": {
         "files.eol": "\n",
